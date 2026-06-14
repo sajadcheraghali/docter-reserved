@@ -1,0 +1,19 @@
+.pagginationBox {
+    
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+
+    .pagginationHover {
+        border-radius: 999rem;
+        padding: 0 1rem;
+
+        &:hover {
+            background-color: blue;
+            font-weight: bolder;
+            font-size: larger;
+            transition: font-size 0.5s ease-in-out , font-weight 0.5s ease-in-out;
+        }
+    }
+}

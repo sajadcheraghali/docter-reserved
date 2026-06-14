@@ -1,0 +1,9 @@
+.specialtyBox {
+   
+     .specialtyBox2 {
+        display: flex;
+        gap: 2px;
+        width: 8rem;
+        margin-bottom: 0.3rem;
+     }
+}

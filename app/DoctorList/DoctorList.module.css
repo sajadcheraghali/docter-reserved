@@ -1,0 +1,12 @@
+.doctorpage {
+    display: flex;
+
+    .filterBox {
+        h3{
+            font-weight: bolder;
+        }
+        padding-left: 0.5rem;
+        
+
+    }
+}

@@ -1,0 +1,106 @@
+.global-search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    inline-size: min(50rem , 100%);
+
+    padding-inline: 1rem;
+
+    /* border: 1px solid var(--color-gray-20); */
+     border: 1px solid;
+    border-radius: 999rem;
+
+        &:hover {
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 3);
+            transition: box-shadow 0.5s ease-in-out;
+    }
+
+
+    /* zarebin */
+    .prefix {
+        display: grid;
+        align-items: center;
+
+        font-size: var(--fz-500);
+    }
+
+    input {
+        flex: 1 1 0;
+
+        background-color: transparent;
+
+        padding: 1rem;
+
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    /* khate amoudi */
+    .divider {
+        background-color: var(--color-gray-20);
+
+        block-size: 2em;
+        inline-size: 1px;
+    }
+
+    /* cities */
+    .suffix {
+        button {
+            background-color: transparent;
+
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+
+            padding: 0.5rem 0.5rem;
+
+            border: none;
+            border-radius: var(--border-radius);
+
+            cursor: pointer;
+
+            svg {
+                font-size: var(--fz-500);
+            }
+
+            &:hover{
+                /* background-color: var(--color-gray-16); */
+                 background-color: rgb(238, 238, 247);
+
+            }
+        }
+    }
+
+    &:focus-within {
+        border-color: var(--color-primary);
+
+        .prefix{
+            color: var(--color-primary);
+        }
+    }
+}
+
+.header {
+    inline-size: min(50rem , 100%);
+
+
+
+}
+
+.linkdoctor {
+    border: 1px solid rgb(202, 196, 196);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+        background-color: blue;
+        padding: 1rem;
+        transition: padding 0.5s ease-in-out;
+    }
+}
+

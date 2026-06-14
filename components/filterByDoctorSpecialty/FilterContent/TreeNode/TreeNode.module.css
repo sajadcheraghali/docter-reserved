@@ -1,0 +1,26 @@
+.indentStyle {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  /* display: flex; */
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+/* Selected state - you'll need to add this class dynamically */
+.indentStyle.selected {
+  color: #2563eb;
+  background-color: #e0e7ff;
+}
+
+/* Hover state for better UX */
+.indentStyle:hover {
+  background-color: #f3f4f6;
+}
+
+.indentStyle.selected:hover {
+  background-color: #dbeafe;
+}

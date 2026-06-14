@@ -1,0 +1,15 @@
+.DoctorProfile1 {
+    border: 1px solid;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
+    .DoctorProfile2 {
+        padding-right: 20px;
+        
+        .DoctorProfile3 {
+            padding-left: 1rem;
+        }
+    }
+}
