@@ -5,6 +5,8 @@ import LazyLoadingInDoctorListComponent from "../../components/lazyLoadingInDoct
 import styles from "./DoctorList.module.css"
 import FilterByDoctorSpecialtyComponent from "@/components/filterByDoctorSpecialty/filterByDoctorSpecialtyComponent";
 
+import { headers } from "next/headers";
+
 
 export interface Doctor extends DoctorModel {
   city: string;
@@ -39,7 +41,17 @@ export default async function DoctorList({ searchParams }: Props) {
   const qs = params.toString();
 
   // Fetch از سرور (نه کلاینت)
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/doctors?${qs}`, );
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/doctors?${qs}`, );
+  const headersList = await headers();
+
+  const host = headersList.get("host");
+
+  const res = await fetch(
+    `${process.env.NODE_ENV === "development" ? "http" : "https"}://${host}/api/doctors?${qs}`,
+    {
+      cache: "no-store",
+    }
+  );
   const doctors: Doctor[] = res.ok ? await res.json()  : [];
 
   const degreeLevel: string[] = ["متخصص", "فوق تخصص", "دکترا عمومی", "کارشناسی"];
