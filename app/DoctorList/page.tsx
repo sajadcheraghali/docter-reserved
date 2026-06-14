@@ -36,11 +36,10 @@ export default async function DoctorList({ searchParams }: Props) {
     if (degrees.length > 0) params.set("degree", degrees.join(","));
     if (specialty) params.set("specialty", encodeURIComponent(specialty));
 
-
   const qs = params.toString();
 
   // Fetch از سرور (نه کلاینت)
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/doctors?${qs}`, );
+  const res = await fetch(`${process.env.next_public_base_url}/api/doctors?${qs}`, );
   const doctors: Doctor[] = res.ok ? await res.json()  : [];
 
   const degreeLevel: string[] = ["متخصص", "فوق تخصص", "دکترا عمومی", "کارشناسی"];
