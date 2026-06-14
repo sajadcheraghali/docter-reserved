@@ -39,7 +39,8 @@ export default async function DoctorList({ searchParams }: Props) {
   const qs = params.toString();
 
   // Fetch از سرور (نه کلاینت)
-  const res = await fetch(`${process.env.next_public_base_url}/api/doctors?${qs}`, );
+  // const res = await fetch(`${process.env.next_public_base_url}/api/doctors?${qs}`, );
+  const res = await fetch(`https://docter-reserved-ap37of55g-sajads-projects-f9b66e16.vercel.app/api/doctors?${qs}`, );
   const doctors: Doctor[] = res.ok ? await res.json()  : [];
 
   const degreeLevel: string[] = ["متخصص", "فوق تخصص", "دکترا عمومی", "کارشناسی"];
